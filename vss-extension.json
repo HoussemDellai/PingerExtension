@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "HoussemDellai",
+    "publisher": "HoussemDellai",
+    "version": "2.0.19",
+    "name": "Pinger",
+    "description": "Pings a public URL",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+		"default": "pinger.jpg"
+    },
+    "categories": [
+        "Build and release"
+      ],
+    "contributions": [
+        {
+            "id": "HelloBuildTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildtask"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "buildtask"
+        }
+    ]
+}

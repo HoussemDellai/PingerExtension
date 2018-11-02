@@ -1,0 +1,47 @@
+{
+  "id": "c35aaa7b-777a-4785-b839-7407a6f0a4d7",
+  "name": "pinger",
+  "friendlyName": "pinger",
+  "author": "Houssem Dellai",
+  "description": "Pings a public URL",
+  "category": "Build",
+  "visibility": [
+    "Build"
+  ],
+  "runsOn": [
+    "Agent",
+    "DeploymentGroup"
+  ],
+  "version": {
+    "Major": 1,
+    "Minor": 5,
+    "Patch": 16
+  },
+  "instanceNameFormat": "Pings $(Url)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "Url",
+      "type": "string",
+      "label": "Url",
+      "defaultValue": "http://houssemdellai.com",
+      "required": true,
+      "helpMarkDown": "Enter your Url address to ping"
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "powershell.ps1",
+      "platforms": [
+        "windows"
+      ],
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}
